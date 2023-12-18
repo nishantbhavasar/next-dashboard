@@ -13,6 +13,7 @@ export default function Search({ placeholder }: { placeholder: string }) {
   ) {
     let query = e.target.value;
     let param = new URLSearchParams(searchParams);
+    param.set('page', '1');
     if (query) {
       param.set("query", query);
     } else {
